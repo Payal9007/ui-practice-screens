@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WalkWin - Login</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+
+
+        <div class="screen" id="splashScreen">
+
+
+            <svg class="clouds cloud-1" viewBox="0 0 200 100" preserveAspectRatio="none">
+                <path fill="#FFA573" opacity="0.8"
+                    d="M160,100 C160,77 141,60 118,60 C110,60 103,63 97,67 C90,44 68,30 45,30 C19,30 -2,51 -2,77 L-2,100 L160,100 Z" />
+            </svg>
+            <svg class="clouds cloud-2" viewBox="0 0 250 150" preserveAspectRatio="none">
+                <path fill="#FFA573" opacity="0.9"
+                    d="M220,150 C220,111 188,80 149,80 C136,80 124,84 113,91 C101,52 64,28 24,28 C12,28 1,30 -8,35 L-8,150 L220,150 Z" />
+            </svg>
+
+
+            <div class="star star-1"><svg viewBox="0 0 24 24">
+                    <path fill="#FFF" d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z" />
+                </svg></div>
+            <div class="star star-2"><svg viewBox="0 0 24 24">
+                    <path fill="#FFF" d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z" />
+                </svg></div>
+            <div class="star star-3"><svg viewBox="0 0 24 24">
+                    <path fill="#FFF" d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z" />
+                </svg></div>
+            <div class="star star-4"><svg viewBox="0 0 24 24">
+                    <path fill="#FFF"
+                        d="M12 2C12.5 7 14.5 9 19 9.5C14.5 10 12.5 12 12 17C11.5 12 9.5 10 5 9.5C9.5 9 11.5 7 12 2Z" />
+                </svg></div>
+
+
+            <svg class="backdrop-line" viewBox="0 0 500 200" preserveAspectRatio="none">
+                <path d="M-50,100 Q 250,200 550,80" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2" />
+            </svg>
+
+
+            <div class="panda-container">
+                <img src="panda.png" alt="WalkWin Panda" class="panda-img" id="pandaImg" />
+            </div>
+
+
+            <div class="brand-text">WalkWin</div>
+        </div>
+
+
+        <div class="screen hidden" id="loginScreen">
+
+            <div class="login-box-wrapper">
+                <div class="login-logo-wrapper">
+                    <img src="panda.png" alt="Panda Mini Logo" class="login-logo" />
+                </div>
+
+                <div class="login-form-container">
+                    <div class="login-text">
+                        <h2>Welcome!</h2>
+                        <p>Let's keep walking & winning.</p>
+                    </div>
+
+                    <form id="loginForm">
+                        <div class="input-group">
+                            <span class="icon">
+
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="#ff6a1a">
+                                    <path
+                                        d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                                </svg>
+                            </span>
+                            <input type="text" placeholder="Username or Email" required />
+                        </div>
+
+                        <div class="input-group">
+                            <span class="icon">
+
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="#ff6a1a">
+                                    <path
+                                        d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z" />
+                                </svg>
+                            </span>
+                            <input type="password" placeholder="Password" required />
+                        </div>
+
+                        <div class="forgot-password">
+                            <a href="#">Forgot password?</a>
+                        </div>
+
+                        <button type="submit" class="btn-primary" id="loginBtn">Log In</button>
+                    </form>
+
+                    <div class="social-login">
+                        <p>Or log in with</p>
+                        <div class="social-icons">
+                            <button class="social-btn">
+                                <svg viewBox="0 0 24 24" width="20" height="20">
+                                    <path fill="#EA4335"
+                                        d="M12 4.63c1.78 0 3.38.61 4.64 1.8l3.49-3.48C18.02 1.05 15.22 0 12 0 7.37 0 3.35 2.65 1.29 6.55l4.03 3.13C6.26 6.3 8.91 4.63 12 4.63z" />
+                                    <path fill="#34A853"
+                                        d="M12 24c3.24 0 5.96-1.07 7.95-2.88l-3.86-3C15.02 18.84 13.68 19.37 12 19.37c-3.16 0-5.84-2.12-6.8-4.99l-4.08 3.16C3.25 21.43 7.31 24 12 24z" />
+                                    <path fill="#4A90E2"
+                                        d="M23.63 12.27c0-.79-.07-1.54-.19-2.27H12v4.51h6.63c-.3 1.54-1.16 2.85-2.45 3.73l3.86 3.01C22.3 19.16 23.63 16 23.63 12.27z" />
+                                    <path fill="#FBBC05"
+                                        d="M5.2 14.38c-.24-.72-.38-1.49-.38-2.38s.14-1.66.38-2.38L1.17 6.49A11.96 11.96 0 000 12c0 1.95.47 3.79 1.29 5.45l4.03-3.13z" />
+                                </svg>
+                            </button>
+                            <button class="social-btn">
+                                <svg viewBox="0 0 24 24" width="20" height="20">
+                                    <path fill="#1877F2"
+                                        d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.1 10.125 24v-8.437H7.078v-3.49h3.047V9.408c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.1 24 18.1 24 12.073z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="signup-prompt">
+                        New here? <a href="#" id="toSignupLink">Create account</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="screen hidden" id="signupScreen" style="display: none;">
+
+            <div class="login-box-wrapper">
+                <div class="login-logo-wrapper">
+                    <img src="panda.png" alt="Panda Mini Logo" class="login-logo" />
+                </div>
+
+                <div class="login-form-container">
+                    <div class="login-text">
+                        <h2>Join Us!</h2>
+                        <p>Create an account to walk & win.</p>
+                    </div>
+
+                    <form id="signupForm">
+                        <div class="input-group">
+                            <span class="icon">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="#ff6a1a">
+                                    <path
+                                        d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                                </svg>
+                            </span>
+                            <input type="text" placeholder="Full Name" required />
+                        </div>
+
+                        <div class="input-group">
+                            <span class="icon">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="#ff6a1a">
+                                    <path
+                                        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                                </svg>
+                            </span>
+                            <input type="email" placeholder="Email Address" required />
+                        </div>
+
+                        <div class="input-group">
+                            <span class="icon">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="#ff6a1a">
+                                    <path
+                                        d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z" />
+                                </svg>
+                            </span>
+                            <input type="password" placeholder="Password" required />
+                        </div>
+
+                        <button type="submit" class="btn-primary" id="signupBtn">Sign Up</button>
+                    </form>
+
+                    <div class="signup-prompt">
+                        Already have an account? <a href="#" id="toLoginLink">Log In</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="screen hidden" id="dashboardScreen" style="display: none;">
+            <div class="dashboard-wrapper">
+
+                <aside class="sidebar">
+                    <div class="sidebar-header">
+                        <img src="panda.png" alt="Logo" class="sidebar-logo" />
+                        <span>WalkWin</span>
+                    </div>
+                    <nav class="sidebar-nav">
+                        <a href="#" class="active">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z" />
+                            </svg>
+                            <span>Dashboard</span>
+                        </a>
+                        <a href="#">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6h-6z" />
+                            </svg>
+                            <span>Stats</span>
+                        </a>
+                        <a href="#">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                <path
+                                    d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                            </svg>
+                            <span>Profile</span>
+                        </a>
+                        <a href="#" id="logoutBtn">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                <path
+                                    d="M13 3h-2v10h2V3zm4.83 2.17l-1.42 1.42C17.99 7.86 19 9.81 19 12c0 3.87-3.13 7-7 7s-7-3.13-7-7c0-2.19 1.01-4.14 2.58-5.42L6.17 5.17C4.23 6.82 3 9.26 3 12c0 4.97 4.03 9 9 9s9-4.03 9-9c0-2.74-1.23-5.18-3.17-6.83z" />
+                            </svg>
+                            <span>Logout</span>
+                        </a>
+                    </nav>
+                </aside>
+
+
+                <main class="dashboard-main">
+                    <header class="main-header">
+                        <div class="header-left">
+                            <h2>Dashboard</h2>
+                            <p>Track your walking progress</p>
+                        </div>
+                        <div class="header-right">
+                            <div class="search-box">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="#999">
+                                    <path
+                                        d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                                </svg>
+                                <input type="text" placeholder="Search statistics..." />
+                            </div>
+                            <div class="notification-icon">
+                                <svg viewBox="0 0 24 24" width="22" height="22" fill="#666">
+                                    <path
+                                        d="M12 22a2 2 0 0 0 2-2h-4a2 2 0 0 0 2 2zm6-6V10a6 6 0 1 0-12 0v6l-2 2v1h16v-1l-2-2z" />
+                                </svg>
+                                <span class="badge"></span>
+                            </div>
+                            <div class="user-pill">
+                                <img src="panda.png" alt="User" />
+                                <span>Admin</span>
+                            </div>
+                        </div>
+                    </header>
+
+                    <div class="stats-grid">
+                        <div class="stat-card steps">
+                            <div class="card-info">
+                                <span class="label">Steps</span>
+                                <span class="value">8,432</span>
+                            </div>
+                        </div>
+                        <div class="stat-card calories">
+                            <div class="card-info">
+                                <span class="label">Calories</span>
+                                <span class="value">320</span>
+                            </div>
+                        </div>
+                        <div class="stat-card friends">
+                            <div class="card-info">
+                                <span class="label">Friends Active</span>
+                                <span class="value">12</span>
+                            </div>
+                        </div>
+                        <div class="stat-card rewards">
+                            <div class="card-info">
+                                <span class="label">Walk Coins</span>
+                                <span class="value">1,250</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-content-grid">
+                        <div class="chart-section">
+                            <h3>Weekly Progress</h3>
+                            <div class="dummy-chart">
+                                <div class="bar" style="height: 40%"></div>
+                                <div class="bar" style="height: 60%"></div>
+                                <div class="bar" style="height: 85%"></div>
+                                <div class="bar" style="height: 50%"></div>
+                                <div class="bar" style="height: 70%"></div>
+                            </div>
+                        </div>
+
+                        <div class="activity-section">
+                            <h3>Recent Activity</h3>
+                            <ul class="activity-list">
+                                <li>
+                                    <div class="activity-icon">🏆</div>
+                                    <div class="activity-info">
+                                        <p>Goal Reached!</p>
+                                        <span>Yesterday</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="activity-icon">💰</div>
+                                    <div class="activity-info">
+                                        <p>Earned 50 Walk Coins</p>
+                                        <span>2 hours ago</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="activity-icon">👟</div>
+                                    <div class="activity-info">
+                                        <p>New Personal Best</p>
+                                        <span>3 days ago</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <footer class="dashboard-footer">
+                        <p>&copy; 2026 WalkWin. Keep Moving, Keep Winning!</p>
+                        <div class="footer-links">
+                            <a href="#">Privacy</a>
+                            <a href="#">Terms</a>
+                            <a href="#">Help</a>
+                        </div>
+                    </footer>
+                </main>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+</body>
+
+</html>
